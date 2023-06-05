@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rancho&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2&family=Bebas+Neue&family=Lobster&family=Open+Sans:wght@300&family=Righteous&family=Syne+Mono&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+  
+body {
+  font-family: Arial, sans-serif;
+  color: #333;
+  line-height: 1.6;
+  background-image: linear-gradient(45deg,rgb(189, 235, 229),hsla(36, 31%, 90%, 1),rgb(198, 205, 228),rgb(230, 185, 246),rgb(243, 215, 199),rgb(210, 193, 243),hsla(36, 31%, 90%, 1));
+  background-size: 400%;
+  animation: bg-animation 10s infinite alternate;
+  background-attachment: fixed;
+}
+  
+@keyframes bg-animation {
+  0% {background-position: left;}
+  100% {background-position: right;}
+}
+
+#header {
+  width: 34%;
+  padding: 15px 30px;
+  position: fixed;
+  display: flex;
+  z-index: 10000;
+  font-family: 'Baloo 2', cursive;
+  background:hsla(45, 17%, 95%, 0.3);
+  backdrop-filter: blur(3px) saturate(1);
+  border-radius: 22px;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 33%;
+}
+
+#nav-checkbox, .nav-toggle {
+  display: none;
+}
+
+.nav-menu li {
+  display: inline-block;
+  justify-content: center;
+  list-style: none;
+}
+
+.nav-menu li a {
+  text-decoration: none;
+  padding: 8px 18px;
+  margin: 0 10px;
+  font-size: 0.8em;
+  color: #333;
+  border-radius: 20px;
+}
+
+#header ul li a:hover,
+#header ul li a.active
+{
+    background: #fff;
+    color: #333;
+}
+
+section {
+  position: relative;
+  max-width: 1170px;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+section #text {
+  position: absolute;
+  color: #333;
+  font-size: 7vw;
+  text-align: center;
+  line-height: 1em;
+  letter-spacing: 0.08em;
+  font-family: 'Rancho', cursive;
+  z-index: 20;
+  text-shadow: 5px 2px 3px #ffffff;
+}
+
+section a {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 2vw;
+  letter-spacing: 0.03em;
+  line-height: 0;
+}
+
+section img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 95%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+  filter: blur(1px);
+}
+
+section #bintang1 {
+  top: 25%;
+  width: 10%;
+  height: 10%;
+  z-index: 100;
+  margin-left: 80%;
+}
+
+section #bintang2 {
+  top: 60%;
+  width: 10%;
+  height: 10%;
+  z-index: 100;
+  margin-left: 7%;
+}
+
+#about {
+  padding: 80px 30px;
+  color: #333;
+}
+.row {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.about-col-1 {
+  flex-basis: 30%;
+}
+.about-col-1 img {
+  width: 100%;
+  border-radius: 15px;
+  margin-left: 3%;
+  margin-top: 5%;
+}
+.about-col-2 {
+  flex-basis: 65%;
+}
+.sub-title {
+  font-family: 'Rancho', cursive;
+  font-size: 60px;
+  font-weight: 600;
+  color: #333;
+}
+.about-col-2 p {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.tab-titles {
+  display: flex;
+  margin: 20px 0 40px;
+}
+.tab-links {
+  margin-right: 50px;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  position: relative;
+}
+.tab-links::after {
+  content: '';
+  width: 0;
+  height: 3px;
+  background: #ff004f;
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  transition: 0.5s;
+}
+.tab-links.active-link::after {
+  width: 80%;
+}
+.tab-contents ul li {
+  list-style: none;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 1vw;
+  margin: 10px 0;
+}
+.tab-contents ul li span {
+  color: #b54769;
+  font-size: 14px;
+}
+.tab-contents {
+  display: none;
+}
+.tab-contents.active-tab {
+  display: block;
+}
