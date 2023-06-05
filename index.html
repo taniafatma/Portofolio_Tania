@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1">
+  <title>Tania Fatma Wati</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" type="text/css" href="responsive.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js" integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body>
+  <header id="header">
+    <input type="checkbox" id="nav-checkbox">
+    <label for="nav-checkbox" class="nav-toggle">
+      <ion-icon name="menu-sharp" class="open"></ion-icon>
+      <ion-icon name="close-sharp" class="close"></ion-icon>
+    </label>
+    <ul class="nav-menu">
+      <li>
+        <a href="#home" class="active">Home</a>
+      </li>
+      <li>
+        <a href="#about">About</a>
+      </li>
+      <li>
+        <a href="#projects">Projects</a>
+      </li>
+      <li>
+        <a href="#contact">Contact</a>
+      </li>
+    </ul>
+  </header>
+
+  <section id="home">
+    <h2 id="text">
+      Hi... I'm Tania Fatma Wati<br><a>A sixth-semester student at Airlangga University<a><br>
+    </h2>
+    <img src="bintang.png" id="bintang1">
+    <img src="bintang.png" id="bintang2">
+  </section>
+
+  <div id="about">
+    <div class="container">
+      <div class="row">
+        <div class="about-col-1">
+          <img src="TaniaProfil.png">
+        </div>
+        <div class="about-col-2">
+          <h1 class="sub-title">About  Me</h1>
+          <p>I am a final semester mathematics student with a strong interest in the field of teaching. I have been actively involved in the student organization (Himatika) throughout my college years, and my last GPA was 3.45. I possess an innovative and creative approach to teaching, and I am capable of delivering the material effectively to students. I am always motivated to learn new things and have excellent communication skills. Additionally, I am skilled and have a deep understanding of the field of Mathematics.</p>
+          <div class="tab-titles">
+            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+            <p class="tab-links" onclick="opentab('education')">Education</p>
+            <p class="tab-links" onclick="opentab('experience')">Experience</p>
+          </div>
+          <div class="tab-contents active-tab" id="skills">
+            <ul>
+              <li>
+                <span>Soft Skill : </span>
+                <br> Good communication skills with students, parents, and colleagues.
+                <br> Possess effective classroom management skills.
+                <br> Proficient in motivating and inspiring others.
+                <br> Being flexible and adaptable to different teaching methods, student needs, and changing educational environments.
+                <br> Strong analytical and problem-solving skills.
+                <br> Valuing and respecting diversity, understanding different cultural backgrounds, and promoting inclusivity in the classroom.
+                <br> Working well in a team setting, collaborating with colleagues, administrators, and other stakeholders to achieve common goals.
+              </li>
+              <li>
+                <span>Hard Skill : </span>
+                <br> Web Design
+                <br> Front End Coding (HTML, CSS, JavaScript)
+                <br> Back End Coding (PHP, SQL, Database)
+                <br> Programming languages: Python, C++
+                <br> Data analysis: Statistical analysis, data mining, data visualization
+                <br> Microsoft Office (Word, Excel, PowerPoint)
+                <br> Video Editing (Filmora)
+                <br> Graphic Design (Canva, Photoshop, CorelDraw)              
+              </li>
+            </ul>
+          </div>
+          <div class="tab-contents" id="education">
+            <ul>
+              <li>
+                <span>Universitas Airlangga (2020 - present)</span>
+                <br> Surabaya, Indonesia
+                <br> Bachelor's Degree in Mathematics, Faculty of Science and Technology
+                <br> GPA : 3.45 / 4.00
+              </li>
+            </ul>
+          </div>
+          <div class="tab-contents" id="experience">
+            <ul>
+              <li>
+                <span> Mathematics Tutor for Junior Students (February 2022 - June 2023)</span>
+                <br> Tutored junior students for three consecutive semesters, covering subjects such as 'Dasar-Dasar Matematika 1', 'Dasar-Dasar Matematika 2', and 'Aljabar Linear'.
+                <br> Assisted over 30 mathematics students each semester.
+                <br> Offered guidance and additional support to junior students facing difficulties in understanding the course materials.
+                <br> Provided clear and simplified explanations for solving exam problems from previous years, serving as study materials for exam preparation.
+              </li>
+              <li>
+                <span> Community Service in SDN 1 Tamansari</span>
+                <br> Conducted training sessions on English language and numeracy for more than 7 teachers at SDN 1 Tamansari with the aim of enhancing their teaching quality and competence.
+                <br> Provided interactive and innovative teaching methods to teachers, fostering a greater enthusiasm for learning among students during the teaching process.
+                <br> Developed a FrontEnd-based E-book website for literacy and numeracy, serving as an interactive and valuable learning resource.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname) {
+      for(tablink of tablinks) {
+        tablink.classList.remove("active-link");
+      }
+      for(tabcontent of tabcontents) {
+        tabcontent.classList.remove("active-tab");
+      }
+      event.currentTarget.classList.add("active-link");
+      document.getElementById(tabname).classList.add("active-tab");
+    }
+  </script>
+</body>
+</html>
