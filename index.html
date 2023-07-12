@@ -4,10 +4,12 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1">
-  <title>Tania Fatma Wati</title>
+  <title>Tania Fatma Wati's Profile</title>
   <link rel="stylesheet" type="text/css" href="style.css">
-  <link rel="stylesheet" type="text/css" href="responsive.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://kit.fontawesome.com/c4254e24a8.js" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js" integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 <body>
@@ -17,48 +19,92 @@
       <ion-icon name="menu-sharp" class="open"></ion-icon>
       <ion-icon name="close-sharp" class="close"></ion-icon>
     </label>
-    <ul class="nav-menu">
-      <li>
-        <a href="#home" class="active">Home</a>
-      </li>
-      <li>
-        <a href="#about">About</a>
-      </li>
-      <li>
-        <a href="#projects">Projects</a>
-      </li>
-      <li>
-        <a href="#contact">Contact</a>
-      </li>
+    <ul id="sidemenu">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#portofolio">Experience</a></li>
+      <li><a href="#experiences">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
     </ul>
   </header>
 
   <section id="home">
     <h2 id="text">
-      Hi... I'm Tania Fatma Wati<br><a>A sixth-semester student at Airlangga University<a><br>
+      Hi... I'm Tania Fatma Wati
+      <br>
+      <br>
     </h2>
+    <a>A seventh-semester student at Airlangga University</a>
     <img src="bintang.png" id="bintang1">
     <img src="bintang.png" id="bintang2">
-  </section>
+  </section> 
 
   <div id="about">
     <div class="container">
       <div class="row">
         <div class="about-col-1">
-          <img src="TaniaProfil.png">
+          <img src="TaniaProfil.png" data-aos="fade-up-right" data-aos-duration="1500">
         </div>
         <div class="about-col-2">
-          <h1 class="sub-title">About  Me</h1>
-          <p>I am a final semester mathematics student with a strong interest in the field of teaching. I have been actively involved in the student organization (Himatika) throughout my college years, and my last GPA was 3.45. I possess an innovative and creative approach to teaching, and I am capable of delivering the material effectively to students. I am always motivated to learn new things and have excellent communication skills. Additionally, I am skilled and have a deep understanding of the field of Mathematics.</p>
-          <div class="tab-titles">
-            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
-            <p class="tab-links" onclick="opentab('education')">Education</p>
-            <p class="tab-links" onclick="opentab('experience')">Experience</p>
+          <h1 class="sub-title" data-aos="fade-down">About Me</h1>
+          <p data-aos="fade-down" data-aos-duration="1200">I am a seventh-semester mathematics student with a strong interest in the field of education and teaching. I am able to convey material effectively to students and have an innovative and creative teaching approach. I am always motivated to learn new things and possess excellent communication skills. Additionally, I have a deep understanding and expertise in the field of Mathematics. Throughout my college days, I have actively engaged in volunteer activities related to teaching, such as tutoring and educational-based social initiatives.</p>
+          <div class="tab-titles" data-aos="fade-down" data-aos-duration="1000">
+            <p class="tab-links active-link" onclick="opentab('education')">Education</p>
+            <p class="tab-links" onclick="opentab('skills')">Technical Skills</p>
+            <p class="tab-links" onclick="opentab('experience')">Soft Skills</p>
           </div>
-          <div class="tab-contents active-tab" id="skills">
+          <div class="tab-contents active-tab" id="education" data-aos="fade-up-left" data-aos-duration="1500">
             <ul>
               <li>
-                <span>Soft Skill : </span>
+                <span>Universitas Airlangga (2020 - present)</span>
+                <br> Surabaya, Indonesia
+                <br> Bachelor's Degree in Mathematics, Faculty of Science and Technology
+                <br> GPA : 3.45 / 4.00
+                <br> Relevant Coursework : 
+                <div class="row">
+                  <div class="list">
+                    <ul>
+                      <li> Fundamentals of Mathematics</li>
+                      <li> Calculus</li>
+                      <li> Number Theory</li>
+                      <li> Analytical Geometry</li>
+                      <li> Matrix Algebra</li>
+                      <li> Discrete Mathematics</li>
+                    </ul>
+                  </div>
+                  <div class="list">
+                    <ul>
+                      <li> Linear Algebra</li>
+                      <li> Real Analysis</li>
+                      <li> Introduction to Complex Variables</li>
+                      <li> Algebraic Structures</li>
+                      <li> Mathematical Statistics</li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="tab-contents" id="skills">
+            <ul>
+              <li>
+                <span> <i class="fas fa-arrow-right"></i> <a href="#experiences">Find Tania's Project</a> <i class="fas fa-arrow-left"></i> </span>
+                <br> Web Design
+                <br> Front End Coding (HTML, CSS, JavaScript)
+                <br> Back End Coding (PHP, SQL, Database)
+                <br> Programming languages: Python, C++
+                <br> Data analysis: Statistical analysis, data mining, data visualization
+                <br> Microsoft Office (Word, Excel, PowerPoint)
+                <br> Maple, Matlab, Minitab, and WinQSB
+                <br> Video Editing (Filmora)
+                <br> Graphic Design (Canva, Photoshop, CorelDraw)              
+              </li>
+            </ul>
+          </div>
+          <div class="tab-contents" id="experience">
+            <ul>
+              <li>
+                <span> <i class="fas fa-arrow-right"></i> <a href="#portofolio">Find Tania's Experience</a> <i class="fas fa-arrow-left"></i> </span>
                 <br> Good communication skills with students, parents, and colleagues.
                 <br> Possess effective classroom management skills.
                 <br> Proficient in motivating and inspiring others.
@@ -67,50 +113,120 @@
                 <br> Valuing and respecting diversity, understanding different cultural backgrounds, and promoting inclusivity in the classroom.
                 <br> Working well in a team setting, collaborating with colleagues, administrators, and other stakeholders to achieve common goals.
               </li>
-              <li>
-                <span>Hard Skill : </span>
-                <br> Web Design
-                <br> Front End Coding (HTML, CSS, JavaScript)
-                <br> Back End Coding (PHP, SQL, Database)
-                <br> Programming languages: Python, C++
-                <br> Data analysis: Statistical analysis, data mining, data visualization
-                <br> Microsoft Office (Word, Excel, PowerPoint)
-                <br> Video Editing (Filmora)
-                <br> Graphic Design (Canva, Photoshop, CorelDraw)              
-              </li>
-            </ul>
-          </div>
-          <div class="tab-contents" id="education">
-            <ul>
-              <li>
-                <span>Universitas Airlangga (2020 - present)</span>
-                <br> Surabaya, Indonesia
-                <br> Bachelor's Degree in Mathematics, Faculty of Science and Technology
-                <br> GPA : 3.45 / 4.00
-              </li>
-            </ul>
-          </div>
-          <div class="tab-contents" id="experience">
-            <ul>
-              <li>
-                <span> Mathematics Tutor for Junior Students (February 2022 - June 2023)</span>
-                <br> Tutored junior students for three consecutive semesters, covering subjects such as 'Dasar-Dasar Matematika 1', 'Dasar-Dasar Matematika 2', and 'Aljabar Linear'.
-                <br> Assisted over 30 mathematics students each semester.
-                <br> Offered guidance and additional support to junior students facing difficulties in understanding the course materials.
-                <br> Provided clear and simplified explanations for solving exam problems from previous years, serving as study materials for exam preparation.
-              </li>
-              <li>
-                <span> Community Service in SDN 1 Tamansari</span>
-                <br> Conducted training sessions on English language and numeracy for more than 7 teachers at SDN 1 Tamansari with the aim of enhancing their teaching quality and competence.
-                <br> Provided interactive and innovative teaching methods to teachers, fostering a greater enthusiasm for learning among students during the teaching process.
-                <br> Developed a FrontEnd-based E-book website for literacy and numeracy, serving as an interactive and valuable learning resource.
-              </li>
             </ul>
           </div>
         </div>
       </div>
     </div>
   </div>
+
+  <div id="portofolio">
+    <div class="container">
+      <h1 class="sub-title" data-aos="zoom-in-down" data-aos-duration="1500">Service & Volunteer Experience</h1>
+      <div class="work-list">
+        <div class="work" data-aos="flip-right" data-aos-duration="2000">
+          <img src="image1.png">
+          <div class="layer">
+            <h3>Mathematics Tutor for Junior Students</h3>
+            <span>July 2021 - June 2022 and February - June 2023</span>
+            <div class="list">
+              <ul>
+                <li> Tutored junior students for three semesters, covering subjects such as 'Dasar-Dasar Matematika 1', 'Dasar-Dasar Matematika 2', and 'Aljabar Linear'.</li>
+                <li> Understanding the needs and addressing academic challenges for over 80 Mathematics students throughout three semesters.</li>
+                <li> Providing clear and simplified explanations for solving over 30 exam questions from previous years, which can be used as study materials for student exam preparations.</li>
+                <li> Offering guidance and additional assistance to more than 20 Mathematics students who encountered difficulties in understanding the course materials each semester.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="work" data-aos="fade-right" data-aos-duration="2500">
+          <img src="image2.png">
+          <div class="layer">
+            <h3>Community Service in SDN 1 Tamansari</h3>
+            <span>November 2022 - January 2023</span>
+            <div class="list">
+              <ul>
+                <li> Conducted workshops and evaluated teaching methods for more than 7 teachers at SDN 1 Tamansari, aiming to enhance the quality and competence of teachers in accordance with the national curriculum in Indonesia.</li>
+                <li> Delivered interactive and innovative STEM-based teaching methods to teachers, enabling them to create an enjoyable learning environment for students.</li>
+                <li> Developed a Front-End development-based literacy and numeracy e-book website as an online learning resource accessible through the internet.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="work" data-aos="fade-right" data-aos-duration="3000">
+          <img src="image3.png">
+          <div class="layer">
+            <h3>HM (Himatika Mengabdi)</h3>
+            <span>May - October 2021</span>
+            <div class="list">
+              <ul>
+                <li> Designed the schedule of community service activities and coordinated the agenda and job descriptions for each committee member during the three-day event, resulting in a success rate of approximately 90%.</li>
+                <li> Organized workshops and seminars aimed at providing understanding and knowledge to participants on educational issues, reaching over 50 participants from the village, including parents and students.</li>
+                <li> Successfully provided benefits and positive influence to participants and the surrounding community in improving the quality of education and inspiring over 60% of the participants in the community service activities in that area.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="experiences">
+    <div class="container">
+      <h1 class="sub-title" data-aos="fade-up" data-aos-duration="1500">My Project</h1>
+      <div class="experiences-list">
+        <div data-aos="fade-left" data-aos-duration="1500">
+          <i class="fas fa-code"></i>
+          <h2>Online Library Website</h2>
+          <p>This online library website is specifically designed for elementary school students. In this Online Library, students can explore a variety of reading materials and gain access to renowned learning platforms across various genres, themes, and subjects. For students looking to improve their literacy skills, this website provides engaging and interactive reading materials. These resources are carefully selected to enhance comprehension, vocabulary, and critical thinking abilities. Additionally, this website has a dedicated section that showcases books and materials focused on mathematics and English language subjects. Students can access math-related books that improve problem-solving skills, logical thinking, and numerical understanding. Similarly, our English language collection offers resources to develop grammar, vocabulary, and language fluency through engaging stories and activities. The goal of this Online Library is to promote literacy, enhance mathematical proficiency, and improve English language skills among elementary school students.</p>
+          <button class="btn3" onclick="window.location='https://taniafatma.github.io/PerpustakaanOnline/' ">
+            <i class="fas fa-external-link-alt"></i>
+          </button>
+        </div>
+        <div data-aos="fade-right" data-aos-duration="1500">
+          <i class="fas fa-crop-alt"></i>
+          <h2>Tutorial Documentation</h2>
+          <p>This video is a documentary that is part of the Himatika Universitas Airlangga YouTube channel. The video features a tutorial discussing the proof by contrapositive and the use of modulo in solving mathematical problems. The tutorial explains the concepts through problem-solving examples related to proof by contrapositive and modulo. The video provides an explanation of the modulo concept and how to use it in problem-solving, along with clear examples that illustrate its application. This tutorial video is one of the documented tutorials I have conducted. The topic of this tutorial video is tailored to the needs of students regarding the subject "Dasar-Dasar Matematika I" which is considered difficult and not fully mastered by most mathematics students in Airlangga University. With clear explanations and provided examples, it is hoped that this video can help improve students' understanding of the concepts of proof by contrapositive and the use of modulo.</p>
+          <button class="btn3" onclick="window.location='https://www.youtube.com/watch?v=bRBoK1WY3h8' ">
+            <i class="fas fa-external-link-alt"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="contact">
+    <div class="container">
+      <div class="row">
+        <div class="contact-left">
+          <h1 class="sub-title" data-aos="zoom-in" data-aos-duration="1500">Contact Me</h1>
+          <p data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1000"><i class="fas fa-envelope"></i>tania.fatma.wati-2020@fst.unair.ac.id</p>
+          <p data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500"><i class="fas fa-phone-square-alt"></i>(+62) 896-3493-3205</p>
+          <div class="social-icons" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="2000">
+            <a href="https://www.linkedin.com/in/taniafatmawati/"><i class="fab fa-linkedin"></i></a>
+            <a href="https://t.me/tania_fatmawati"><i class="fas fa-paper-plane"></i></a>
+            <a href="https://www.instagram.com/tania.fatmawati20/"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.facebook.com/tania.fatmawati.90"><i class="fab fa-facebook"></i></a>
+          </div>
+          <a href="CV Tania.pdf" download class="btn btn2" data-aos="zoom-in" data-aos-duration="2500">Download CV</a>
+        </div>
+        <div class="contact-right">
+          <form name="submit-to-google-sheet">
+            <input type="text" name="Name" placeholder="Your Name" required data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1000">
+            <input type="email" name="Email" placeholder="Your Email Address" required data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
+            <textarea rows="7" name="Message" placeholder="Your Message" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="2000"></textarea>
+            <button type="submit" class="btn btn2" data-aos="zoom-in" data-aos-duration="2500"><span>Submit</span></button>
+          </form>
+          <span id="msg"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="copyright">
+    <p>© 2023 by Tania Fatma Wati <i class="fas fa-heart"></i></p>
+  </div>
+
   <script>
     var tablinks = document.getElementsByClassName("tab-links");
     var tabcontents = document.getElementsByClassName("tab-contents");
@@ -126,5 +242,52 @@
       document.getElementById(tabname).classList.add("active-tab");
     }
   </script>
+
+  <script>
+    AOS.init();
+  </script>
+
+  <script>
+    var sidemenu = document.getElementById("sidemenu");
+    function openmenu(){
+      sidemeu.style.right = "0";
+    }
+    function closemenu(){
+      sidemeu.style.right = "-200px";
+    }
+  </script>
+
+  <script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbxOKpqzQeHu9bSbi55fFKhDj755N9Ue9BWhnC6VXNo4oMHcV84jRs4lhCaCN5HAJSPlwg/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById("msg")
+
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+          msg.innerHTML = "Message sent successfully"
+          setTimeout(function() {
+            msg.innerHTML = ""
+          }, 5000)
+          form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+  <script>
+    $(document).ready(function() {
+        $(window).bind('scroll', function(){
+            var gap = 50;
+            if ($(window).scrollTop() > gap ) {
+                $('header').addClass('active');
+            } else {
+                $('header').removeClass('active');
+            }
+        });
+    });
+    </script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
 </html>
