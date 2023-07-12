@@ -1044,3 +1044,33 @@ form .btn2 {
     font-size: 12px;
   }
 }
+@media all and (max-width: 380px) {
+  section #bintang1 {
+    top: 30%;
+    width: 11%;
+    height: 5%;
+    margin-left: 80%;
+  }
+  section #bintang2 {
+    top: 60%;
+    width: 12%;
+    height: 6%;
+    margin-left: 7%;
+  }
+  
+  #portofolio {
+    padding: 15px 10px;
+  }
+  .work-list {
+    display: block;
+    margin-top: 15px;
+  }
+  .work {
+    margin: 0 5px 25px;
+  }
+  .layer {
+    font-size: 11px;
+    line-height: 14px;
+    padding: 0;
+  }
+}
